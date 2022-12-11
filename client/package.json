@@ -1,5 +1,5 @@
 {
-  "name": "project__name__goes__here",
+  "name": "quizz_app_client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
