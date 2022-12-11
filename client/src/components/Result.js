@@ -1,10 +1,19 @@
-import React from 'react'
-import "../../src/styles/Result.css";
+import React from "react";
+import "../styles/Result.css";
 
-const Result = () => {
+export default function Result() {
+ 
+
   return (
-    <div>Result</div>
-  )
-}
+    <div className="container">
+      <h1 className="title text-light">QuikQuiz</h1>
 
-export default Result
+      <div className="result flex-center">
+        <div className="flex">
+          <span>Username</span>
+          <span className="bold">Daily Tuition</span>
+        </div>
+      </div>
+    </div>
+  );
+}
