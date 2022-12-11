@@ -1,12 +1,30 @@
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./components/Main";
+import Quiz from "./components/Quiz";
+import Result from "./components/Result";
+
+// ********** routes ***********
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main />,
+  },
+  {
+    path: "/quiz",
+    element: <Quiz />,
+  },
+  {
+    path: "/result",
+    element: <Result />,
+  },
+]);
+
 function App() {
   return (
-    <div>
-      <h1>Hello Everyone</h1>
-      <h1>
-        This Project Contains The Basic Setup Of A New React Project. You Need
-        To Change Only The Title & Favicon Of This Project
-      </h1>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
