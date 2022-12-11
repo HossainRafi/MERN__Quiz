@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import "../../src/styles/Main.css";
 
 const Main = () => {
   const inputRef = useRef(null);
