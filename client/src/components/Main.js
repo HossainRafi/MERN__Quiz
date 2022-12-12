@@ -7,7 +7,7 @@ const Main = () => {
 
   return (
     <div className="container">
-      <h1 className="title text-light">QuikQuiz</h1>
+      <h1 className="title text-light">Quiz Application</h1>
       <ol>
         <li>You will be asked 10 questions</li>
         <li>Every question have ONE point</li>
