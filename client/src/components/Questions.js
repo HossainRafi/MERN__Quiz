@@ -20,7 +20,7 @@ export default function Questions() {
     // console.log('radio button change')
   }
 
-  if (isLoading) return <h3 className="text-light">isLoading</h3>;
+  if (isLoading) return <h3 className="text-light">Loading.....</h3>;
   if (serverError)
     return <h3 className="text-light">{serverError || "Unknown Error"}</h3>;
 
