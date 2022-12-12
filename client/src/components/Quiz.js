@@ -1,20 +1,29 @@
-import React from "react";
-import "../../src/styles/Quiz.css";
+import React, { useEffect } from "react";
 import Questions from "./Questions";
 
-const Quiz = () => {
-  
+/** redux store import */
+import { useSelector } from "react-redux";
+
+export default function Quiz() {
+  const state = useSelector((state) => state);
+
+  useEffect(() => {
+    console.log(state);
+  });
+
+  /** next button event handler */
   function onNext() {
-    console.log("on next click");
-  }
-  function onPrev() {
-    console.log("on prev click");
+    console.log("On next click");
   }
 
+  /** Prev button event handler */
+  function onPrev() {
+    console.log("On onPrev click");
+  }
 
   return (
     <div className="container">
-      <h1 className="title text-light">QuikQuiz</h1>
+      <h1 className="title text-light">Quiz Application</h1>
 
       {/* display questions */}
       <Questions />
@@ -29,6 +38,4 @@ const Quiz = () => {
       </div>
     </div>
   );
-};
-
-export default Quiz;
+}
