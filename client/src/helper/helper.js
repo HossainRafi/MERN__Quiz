@@ -25,13 +25,9 @@ export function CheckUserExist({ children }) {
 }
 
 /** get server data */
-export async function getServerData(url, callback) {
-  const data = await (await axios.get(url))?.data;
-  return callback ? callback(data) : data;
+export async function getServerData(url) {
+  const data = await axios.get(url);
+  console.log(data);
 }
 
-/** post server data */
-export async function postServerData(url, result, callback) {
-  const data = await (await axios.post(url, result))?.data;
-  return callback ? callback(data) : data;
-}
+getServerData("http://localhost:5000/api/result");
