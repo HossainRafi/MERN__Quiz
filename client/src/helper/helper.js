@@ -31,3 +31,9 @@ export async function getServerData(url) {
 }
 
 getServerData("http://localhost:5000/api/result");
+
+/** post server data */
+export async function postServerData(url, result, callback) {
+  const data = await (await axios.post(url, result))?.data;
+  return callback ? callback(data) : data;
+}
